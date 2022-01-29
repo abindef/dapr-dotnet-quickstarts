@@ -21,7 +21,10 @@ namespace ServiceInvocation.Controllers
         {
             _logger = logger;
         }
-
+        //dapr 配置 dapr run --app-id serviceinvocation --app-port 5000 --dapr-http-port 13501 -- dotnet run
+        //请求地址
+        //:13501/v1.0/invoke/serviceinvocation/method/api/weather
+        //:5000/api/weather
         [HttpGet("/api/weather")]
         public IEnumerable<WeatherForecast> GetWeather()
         {
